@@ -1,0 +1,10 @@
+# Model hyperparameters
+INPUT_SIZE = 25
+OUTPUT_SIZE = 9
+HIDDEN_LAYERS = [81, 81]
+LEARNING_RATE = 0.001
+BATCH_SIZE = 64
+EPOCHS = 50
+
+Best test MSE: 18.6483
+Best test RMSE: 4.3184
