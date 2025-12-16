@@ -8,8 +8,8 @@ import os
 # Model configuration (must match training)
 INPUT_SIZE = 9
 OUTPUT_SIZE = 9
-HIDDEN_LAYERS = [81, 81]
-DEFAULT_MODEL_PATH = "models/kis_model/best_model.pth"
+HIDDEN_LAYERS = [32, 81, 32]
+DEFAULT_MODEL_PATH = "models/kis_model_3x3/best_model.pth"
 
 
 class UpscaleNet(nn.Module):
@@ -96,7 +96,7 @@ def upscale_image(model, device, image_path):
     # Generate output filename
     base_name = os.path.splitext(image_path)[0]
     ext = os.path.splitext(image_path)[1]
-    output_path = f"{base_name}_ANN{ext}"
+    output_path = f"{base_name}_ANN_3x3{ext}"
     
     # Save upscaled image
     cv2.imwrite(output_path, output_img)
